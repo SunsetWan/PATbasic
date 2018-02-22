@@ -8,14 +8,9 @@ class Student {
 	public:
 		 string sName;
 	     int sGrade;
-	     int sNum;
+	     string sNum;
 	Student() {
 		
-	}
-	Student(string sname, int snum, int sgrade) {
-		this->sName = sname;
-		this->sNum = snum;
-		this->sGrade = sgrade;
 	}
 	
 	void printInfo() {
@@ -25,12 +20,12 @@ class Student {
 };
 
 void printStuInfo(vector<Student> argu1) {
-		int maxGrade = -1;
+	int maxGrade = -1;
 	int minGrade = 101;
 	string maxGraName;
-	int maxGraNum;
+	string maxGraNum;
 	string minGraName;
-	int minGraNum;
+	string minGraNum;
 	
 	for( auto s : argu1) {
 		if (maxGrade < s.sGrade) {
@@ -48,7 +43,7 @@ void printStuInfo(vector<Student> argu1) {
 	
 	cout<< maxGraName << " " << maxGraNum << endl;
 	
-	cout<< minGraName << " " << minGraNum << endl;	
+	cout<< minGraName << " " << minGraNum;	
 }
 
 int main(int argc, char *argv[]) {
